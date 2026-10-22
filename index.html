@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PokéIMC - Calculadora Pokémon</title>
+  <link rel="stylesheet" href="algo.css" />
+  <!-- Fonte com estilo retrô / divertido -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="pokedex-container">
+    <!-- Topo da Pokédex -->
+    <div class="pokedex-top">
+      <div class="big-blue-light"></div>
+      <div class="small-lights">
+        <span class="red-light"></span>
+        <span class="yellow-light"></span>
+        <span class="green-light"></span>
+      </div>
+    </div>
+
+    <!-- Tela da Pokédex -->
+    <div class="pokedex-screen">
+      <h1>PokéIMC</h1>
+      <p class="subtitle">por Rael Isaac</p>
+
+      <form id="imc-form">
+        <div class="input-group">
+          <label for="peso">PESO (kg)</label>
+          <input 
+            type="number" 
+            id="peso" 
+            step="0.1" 
+            placeholder="Ex: 70.5" 
+            required 
+          />
+        </div>
+
+        <div class="input-group">
+          <label for="altura">ALTURA (m ou cm)</label>
+          <input 
+            type="number" 
+            id="altura" 
+            step="0.01" 
+            placeholder="Ex: 1.75" 
+            required 
+          />
+        </div>
+
+        <button type="submit" id="btn-calcular">
+          <span class="pokeball-icon"></span> ANALISAR STATUS
+        </button>
+      </form>
+
+      <!-- Painel de Resultado -->
+      <div id="resultado" class="resultado hidden">
+        <div class="pokemon-badge" id="pokemon-avatar">⚡</div>
+        <div class="stats-box">
+          <h2>IMC: <span id="valor-imc">0.0</span></h2>
+          <p id="classificacao" class="classificacao"></p>
+          <p id="categoria-pokemon" class="categoria-pokemon"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Parte inferior com botões decorativos estilo Pokédex -->
+    <div class="pokedex-bottom">
+      <div class="d-pad"></div>
+      <div class="pokedex-buttons">
+        <span class="btn-blue"></span>
+        <span class="btn-black"></span>
+      </div>
+    </div>
+  </div>
+
+  <script src="code.js"></script>
+</body>
+</html>
